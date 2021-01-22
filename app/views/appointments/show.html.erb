@@ -1,0 +1,8 @@
+<h1>Appointment Information:</h1>
+
+<h3>Date & Time:</h3>
+<%= @appointment.appointment_datetime.strftime("%B %d, %Y at %k:%M")%> <br>
+<h3>Doctor: </h3>
+<%= link_to @appointment.doctor_name, doctor_path(@appointment.doctor)%> <br>
+<h3>Patient: </h3>
+<%= link_to @appointment.patient_name, patient_path(@appointment.patient)%> <br>
